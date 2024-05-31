@@ -9,6 +9,11 @@ body {
 }
 
 /* nav */
+
+.nav-menu.active {
+  display: none;
+}
+
 nav {
   background: rgba(255, 255, 255, 0.8);
   color: #000;
@@ -54,6 +59,22 @@ nav ul li a {
   background: rgb(255,254,86);
   background: linear-gradient(0deg, rgba(255,254,86,1) 0%, rgba(255,255,255,1) 100%);
   color: gray;
+}
+.nav-t {
+  background-color: #fff;
+  border: #000 solid 1px;
+  width: 20px;
+  height: 10px;
+  border-radius: 50px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 20px;
+  display: none;
+}
+.nav-t img {
+  width: 30px;
+  height: 30px;
 }
 
 section {
@@ -225,7 +246,7 @@ section {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: -20px;  /** 아래 top의 두께와 같다 **/
+  bottom: -20px;
   border-top: 20px solid yellow;
   border-right: 20px solid transparent;
 }
@@ -240,20 +261,34 @@ section {
   margin: 20px;
 }
 
-@media (max-width: 768px) {
-  nav ul {
+/* media */
+
+@media screen and (max-width: 700px) {
+  nav {
     flex-direction: column;
-    align-items: center;
-    margin-right: 0;
+    align-items: flex-start;
+    margin: 0;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
   }
 
   .nav-button {
     padding: 8px 16px;
     font-size: 14px;
+  }
+
+  .nav-t {
+    display: block;
   }
 
   .home {
@@ -282,6 +317,11 @@ section {
   section {
     padding: 10px;
   }
+}
+
+
+@media (max-width: 768px) {
+  
 }
 
 @media (max-width: 480px) {

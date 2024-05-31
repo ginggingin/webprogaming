@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </head>
+
 <body>
+
     <nav>
-        <ul>  
-            <li><a href="#home" class="nav-button" >Home</a></li>
-            <li><a href="#about" class="nav-button" >About Me</a></li>
-            <li><a href="#tmi" class="nav-button" >T.M.I</a></li>
-            <li><a href="#contact" class="nav-button" >Contact</a></li>
-        </ul>
+      <ul class="nav-menu">  
+        <li><a href="#home" class="nav-button" >Home</a></li>
+        <li><a href="#about" class="nav-button" >About Me</a></li>
+        <li><a href="#tmi" class="nav-button" >T.M.I</a></li>
+        <li><a href="#contact" class="nav-button" >Contact</a></li>
+      </ul>
+
+      <a href="#" class="nav-t"></a>
+
     </nav>
 
     <section class="home" id="home">
@@ -115,27 +121,5 @@
       </a>
       
     </section>
-
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var navLinks = document.querySelectorAll('nav ul li a');
-
-        navLinks.forEach(function(navLink) {
-          navLink.addEventListener('click', function(event) {
-            event.preventDefault(); 
-            var targetId = this.getAttribute('href'); 
-            var targetSection = document.querySelector(targetId); 
-            if (targetSection) {
-              window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-              });
-            }
-          });
-        });
-      });
-
-    </script>
 </body>
 </html>

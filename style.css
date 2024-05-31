@@ -209,6 +209,37 @@ section {
   margin-bottom: 0;
 }
 
+/* contact */
+
+.bubble {
+  position: relative;
+  display: inline-block;
+  min-width: 100px;
+  min-height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+  background: yellow;
+  }
+  
+.bubble:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -20px;  /** 아래 top의 두께와 같다 **/
+  border-top: 20px solid yellow;
+  border-right: 20px solid transparent;
+}
+
+.bubble h1 {
+  color: white;
+  text-shadow: -2px 0px black, 0px 2px black, 2px 0px black, 0px -2px black;
+}
+.contact img {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+}
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;

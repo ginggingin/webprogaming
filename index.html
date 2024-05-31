@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~SeongJuHouse~</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>  
+            <li><a href="#home" class="nav-button" >Home</a></li>
+            <li><a href="#about" class="nav-button" >About Me</a></li>
+            <li><a href="#tmi" class="nav-button" >T.M.I</a></li>
+            <li><a href="#contact" class="nav-button" >Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="home" id="home">
+      <h1 class="name" style="font-family: 'Playfair Display' ">SeongJu</h1>
+      <img class="img1" src="img/seongjutext.png" alt="">
+      <img class="img2" src="img/collabo.png" alt="">
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-me">
+        <div class="title"><h1>about Me</h1></div>
+        <div class="content">
+          <img src="img/seongjuface.jpg" alt="나">
+          <dl class="txt">
+            <div>
+              <dt>이름/Name</dt>
+              <dd>김성주</dd>
+            </div>
+            <div>
+              <dt>생년월일/Date of Birth</dt>
+              <dd>03-11-29</dd>
+            </div>
+            <div>
+              <dt>지역/Location</dt>
+              <dd>춘천</dd>
+            </div>
+            <div>
+              <dt>학교 전공/School Major</dt>
+              <dd>강원대 컴퓨터공학과</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+    
+    <section class="tmi" id="tmi">
+      <a id="tmi"></a>
+      <div class="chat-container">
+        <div class="message-row received">
+          <div class="message">
+            <p>너가 좋아하는 건 뭐야?</p>
+          </div>
+        </div>
+        <div class="message-row sent">
+          <div class="message">
+            <p>음... <br>
+              노래 듣는거랑 자는거? 아! 그리고 종강!!!</p>
+            </div>
+        </div>
+        <div class="message-row received">
+          <div class="message">
+            <p>아하 그렇구나</p>
+          </div>
+        </div>
+        <div class="message-row received">
+          <div class="message">
+            <p>그럼 mbti는 뭐야?</p>
+          </div>
+        </div>
+        <div class="message-row sent">
+          <div class="message">
+            <p>istp!</p>
+          </div>
+        </div>
+        <div class="message-row received">
+          <div class="message">
+            <p>어떤 음식을 좋아해?</p>
+          </div>
+      </div>
+        <div class="message-row sent">
+          <div class="message">
+            <p>음... 일단 나는 짜장면 짬뽕 탕수육 라면 꿔바로우 등촌샤브샤브 엽기떡볶이 닭볶음탕 참치김밥 회 초밥 빙수 참치죽 파스타 김치찌개 비빔밥 훠궈 소고기 샤인머스켓 망고 피자 키위 단감 김치전 잡채 좋아해^^</p>
+          </div>
+        </div>
+      <div class="message-row received">
+        <div class="message">
+            <p>알고 있는 음식이 진짜 많으시다</p>
+        </div>  
+      </div>
+    </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+      <a id="contact"></a>
+      bb
+    </section>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(function(navLink) {
+          navLink.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            var targetId = this.getAttribute('href'); 
+            var targetSection = document.querySelector(targetId); 
+            if (targetSection) {
+              window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+
+    </script>
+</body>
+</html>
